@@ -1,29 +1,236 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Privacy Policy — ReceiptVault</title>
+  <meta name="color-scheme" content="dark light" />
+  <style>
+    :root{
+      --bg:#0b0b0c;
+      --card:#151518;
+      --border:#242429;
+      --border2:#2a2a31;
+      --text:#ffffff;
+      --muted:#cfcfd6;
+      --muted2:#a8a8b3;
+      --link:#8ab4ff;
+      --pill:#1f1f24;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:16px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      font-family:-apple-system, system-ui, Arial;
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+    }
+    .wrap{
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 48px 18px;
+    }
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      margin-bottom:16px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width:0;
+    }
+    .logo{
+      width:38px;
+      height:38px;
+      border-radius:12px;
+      background:linear-gradient(135deg, rgba(138,180,255,.22), rgba(255,255,255,.06));
+      border:1px solid var(--border);
+      display:grid;
+      place-items:center;
+      box-shadow: var(--shadow);
+      flex:0 0 auto;
+    }
+    .logo svg{ opacity:.9; }
+    .brand h1{
+      margin:0;
+      font-size:22px;
+      letter-spacing:-.2px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .nav{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:var(--pill);
+      border:1px solid var(--border2);
+      color:var(--muted);
+      font-size:13px;
+      line-height:1;
+      white-space:nowrap;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow: var(--shadow);
+    }
+    .card h2{
+      margin:18px 0 8px;
+      font-size:16px;
+      letter-spacing:-.1px;
+    }
+    .card h2:first-of-type{ margin-top:0; }
+    p{
+      margin:10px 0;
+      color:var(--muted);
+      line-height:1.6;
+    }
+    .small{
+      color:var(--muted2);
+      font-size:13px;
+      line-height:1.5;
+    }
+    ul{
+      margin:10px 0 0 18px;
+      color:var(--muted);
+      line-height:1.6;
+      padding:0;
+    }
+    li{ margin:6px 0; }
+    .grid{
+      display:grid;
+      gap:14px;
+      margin-top:14px;
+      grid-template-columns: 1fr;
+    }
+    .mini{
+      background:#121214;
+      border:1px solid var(--border2);
+      border-radius:14px;
+      padding:14px;
+    }
+    .mini b{ color:#fff; }
+    .footer{
+      margin-top:14px;
+      color:var(--muted2);
+      font-size:12.5px;
+      line-height:1.5;
+    }
+    .hr{
+      height:1px;
+      background:var(--border);
+      margin:16px 0;
+    }
+
+    /* Light mode (optional, keeps it readable if Safari forces light) */
+    @media (prefers-color-scheme: light) {
+      :root{
+        --bg:#f5f6f8;
+        --card:#ffffff;
+        --border:#e7e8ee;
+        --border2:#e0e2ea;
+        --text:#111318;
+        --muted:#4b5563;
+        --muted2:#6b7280;
+        --link:#2563eb;
+        --pill:#f3f4f6;
+        --shadow: 0 10px 30px rgba(0,0,0,.08);
+      }
+      .mini{ background:#fafafa; }
+    }
+  </style>
 </head>
-<body style="font-family: -apple-system, system-ui; max-width: 820px; margin: 40px auto; padding: 0 16px; line-height: 1.6;">
-  <h1>Privacy Policy — ReceiptVault</h1>
-  <p><strong>Last updated:</strong> February 2026</p>
+<body>
+  <div class="wrap">
 
-  <p>ReceiptVault is designed to store your receipts on your device. We do not sell your data.</p>
+    <!-- Top: consistent with your support page vibe -->
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <!-- simple shield icon -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2l8 4v6c0 5-3.4 9.4-8 10-4.6-.6-8-5-8-10V6l8-4z"
+                  stroke="currentColor" stroke-width="1.6" opacity="0.9"/>
+            <path d="M8.5 12l2.3 2.3L15.6 9.5"
+                  stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+          </svg>
+        </div>
+        <h1>Privacy Policy</h1>
+      </div>
 
-  <h2>Data We Collect</h2>
-  <ul>
-    <li>Receipts and related metadata you add (stored on-device).</li>
-    <li>Subscription status (to unlock Pro features), handled by Apple.</li>
-  </ul>
+      <div class="nav">
+        <a class="pill" href="https://pace200413.github.io/receipt-vault-help/">Support</a>
+        <a class="pill" href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms (EULA)</a>
+        <a class="pill" href="mailto:receiptvaulthelp@gmail.com">Contact</a>
+      </div>
+    </div>
 
-  <h2>How Data Is Used</h2>
-  <p>Data is used only to provide app features (receipt storage, search, export, reminders).</p>
+    <div class="card">
+      <p class="pill"><b style="color:var(--text);">ReceiptVault</b>&nbsp;•&nbsp;Last updated: February 2026</p>
 
-  <h2>Third-Party Services</h2>
-  <p>Subscriptions are processed by Apple. We do not receive your payment details.</p>
+      <p>
+        ReceiptVault is designed to be <b>private by default</b>. Your receipts are stored on your device.
+        We do <b>not</b> sell your data.
+      </p>
 
-  <h2>Contact</h2>
-  <p>If you have questions, contact: <a href="mailto:receiptvaulthelp@gmail.com">receiptvaulthelp@gmail.com</a></p>
+      <div class="hr"></div>
+
+      <h2>Data we collect</h2>
+      <ul>
+        <li><b>Receipt content</b> (merchant, amount, date, category, notes) you add — stored on-device.</li>
+        <li><b>Receipt photos</b> you attach or scan (optional) — stored on-device.</li>
+        <li><b>Subscription status</b> (to unlock Pro features) — handled by Apple via StoreKit.</li>
+      </ul>
+
+      <h2>How we use data</h2>
+      <p>
+        Data is used only to provide app features such as scanning, organizing, insights, reminders, and exporting.
+      </p>
+
+      <h2>Third-party services</h2>
+      <p>
+        Purchases and subscriptions are processed by Apple. ReceiptVault does not receive your payment card details.
+      </p>
+
+      <div class="grid">
+        <div class="mini">
+          <p class="small" style="margin:0;">
+            <b>Note:</b> If you enable reminders, iOS notifications are used only for alerts you choose.
+            If you import/scan receipts, the app may request Photos/Camera permission.
+          </p>
+        </div>
+
+        <div class="mini">
+          <p class="small" style="margin:0;">
+            <b>Questions?</b> Email us at
+            <a href="mailto:receiptvaulthelp@gmail.com">receiptvaulthelp@gmail.com</a>.
+          </p>
+        </div>
+      </div>
+
+      <p class="footer">
+        This page is provided for transparency and to satisfy App Store requirements. If our practices change,
+        we will update this policy.
+      </p>
+    </div>
+  </div>
 </body>
 </html>
